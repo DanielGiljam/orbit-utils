@@ -1,33 +1,33 @@
 {
-  "name": "typed-record-schema",
+  "name": "zod-to-model-definitions",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/typed-record-schema/src",
+  "sourceRoot": "packages/zod-to-model-definitions/src",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nx/vite:build",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/packages/typed-record-schema"
+        "outputPath": "dist/packages/zod-to-model-definitions"
       }
     },
     "publish": {
-      "command": "node tools/scripts/publish.mjs typed-record-schema {args.ver} {args.tag}",
+      "command": "node tools/scripts/publish.mjs zod-to-model-definitions {args.ver} {args.tag}",
       "dependsOn": ["build"]
     },
     "test": {
       "executor": "@nx/vite:test",
-      "outputs": ["coverage/packages/typed-record-schema"],
+      "outputs": ["coverage/packages/zod-to-model-definitions"],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "../../coverage/packages/typed-record-schema"
+        "reportsDirectory": "../../coverage/packages/zod-to-model-definitions"
       }
     },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/typed-record-schema/**/*.ts"]
+        "lintFilePatterns": ["packages/zod-to-model-definitions/**/*.ts"]
       }
     }
   },

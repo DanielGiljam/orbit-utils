@@ -81,9 +81,7 @@ importers:
         specifier: ^0.31.0
         version: 0.31.0(@vitest/ui@0.31.0)(jsdom@20.0.3)
 
-  packages/typed-model-definition: {}
-
-  packages/typed-record-schema: {}
+  packages/zod-to-model-definitions: {}
 
 packages:
 

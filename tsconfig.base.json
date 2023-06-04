@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@orbit-utils/typed-record-schema": [
-        "packages/typed-record-schema/src/index.ts"
+      "@orbit-utils/zod-to-model-definitions": [
+        "packages/zod-to-model-definitions/src/index.ts"
       ]
     }
   },

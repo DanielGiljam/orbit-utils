@@ -6,7 +6,7 @@ import dts from 'vite-plugin-dts';
 import { joinPathFragments } from '@nx/devkit';
 
 export default defineConfig({
-  cacheDir: '../../node_modules/.vite/typed-record-schema',
+  cacheDir: '../../node_modules/.vite/zod-to-model-definitions',
 
   plugins: [
     dts({
@@ -35,7 +35,7 @@ export default defineConfig({
     lib: {
       // Could also be a dictionary or array of multiple entry points.
       entry: 'src/index.ts',
-      name: 'typed-record-schema',
+      name: 'zod-to-model-definitions',
       fileName: 'index',
       // Change this to the formats you want to support.
       // Don't forgot to update your package.json as well.
