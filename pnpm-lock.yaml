@@ -23,6 +23,9 @@ importers:
       '@nx/workspace':
         specifier: 16.3.2
         version: 16.3.2
+      '@orbit/records':
+        specifier: ^0.17.0
+        version: 0.17.0
       '@types/node':
         specifier: 18.7.1
         version: 18.7.1
@@ -80,6 +83,9 @@ importers:
       vitest:
         specifier: ^0.31.0
         version: 0.31.0(@vitest/ui@0.31.0)(jsdom@20.0.3)
+      zod:
+        specifier: ^3.21.4
+        version: 3.21.4
 
   packages/zod-to-model-definitions: {}
 
@@ -2703,6 +2709,37 @@ packages:
     resolution: {integrity: sha512-MMeLdHyFIALioycq+LFcA71v0S2xpQUX2cw6pPbHQjaibcHYwLnmK/kMZaWuGfGfjBJZ3wRUq+dOaWsvrPJVvA==}
     dependencies:
       '@octokit/openapi-types': 17.2.0
+    dev: true
+
+  /@orbit/core@0.17.0:
+    resolution: {integrity: sha512-wzaA7d04QU+Bi/ebVk100vPhVNDe8CHiACK7h0FjX+qTa54M9YmCNOOlXHj6PvO6GWY6s5eDBaloJdijKXjFHQ==}
+    dependencies:
+      '@orbit/utils': 0.17.0
+    dev: true
+
+  /@orbit/data@0.17.0:
+    resolution: {integrity: sha512-aaF40uriJ0SBXjoqyZ5/03Cj1XVxYzDwZnrRlM7GjI1lSd6f6OwyoDeru5WoflQvDTE3ILej1h0v1++fh9H5/A==}
+    dependencies:
+      '@orbit/core': 0.17.0
+      '@orbit/utils': 0.17.0
+    dev: true
+
+  /@orbit/records@0.17.0:
+    resolution: {integrity: sha512-ljXbaV4o3iK3xDhHlCrtl5YQiMMHWav71m2qOd/BprdieMtU7nMAWeAUfXegLnIAv35imrowGcIgx5rGXkGo0g==}
+    dependencies:
+      '@orbit/data': 0.17.0
+      '@orbit/utils': 0.17.0
+      '@orbit/validators': 0.17.0
+    dev: true
+
+  /@orbit/utils@0.17.0:
+    resolution: {integrity: sha512-nRxzl0pvFHK9+g0WhQMq++6EZ5YQjPxEkqRDAeIfPJtX2+hu8hG7Oyz/KzHJRWimzjC9nRDL4M2HatZleFCwNg==}
+    dev: true
+
+  /@orbit/validators@0.17.0:
+    resolution: {integrity: sha512-OOcrTWdai0ce7CEXPsVXOw6oxHVCbE7W9nSH1Fn3B28VpzUnKQ9O/d59e3S5E1DTFXZpNvcVBAVsohQS+PGm+g==}
+    dependencies:
+      '@orbit/utils': 0.17.0
     dev: true
 
   /@parcel/watcher@2.0.4:
@@ -10051,4 +10088,8 @@ packages:
       validator: 13.9.0
     optionalDependencies:
       commander: 9.5.0
+    dev: true
+
+  /zod@3.21.4:
+    resolution: {integrity: sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==}
     dev: true
