@@ -1,6 +1,19 @@
 {
     "name": "@orbit-utils/zod-to-model-definition",
     "version": "0.0.1",
+    "description": "Define your RecordSchema using Zod.",
+    "keywords": [
+        "orbit",
+        "orbit.js",
+        "data",
+        "synchronization",
+        "zod",
+        "typescript",
+        "schema",
+        "validation",
+        "type",
+        "inference"
+    ],
     "scripts": {
         "build": "rm -rf ../../dist/packages/zod-to-model-definition && tsup"
     },
