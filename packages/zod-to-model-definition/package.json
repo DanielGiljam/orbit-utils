@@ -1,5 +1,5 @@
 {
-  "name": "@orbit-utils/zod-to-model-definitions",
+  "name": "@orbit-utils/zod-to-model-definition",
   "version": "0.0.1",
   "scripts": {
     "build": "rm -rf ../../dist/packages/zod-to-model-definitions && tsup"

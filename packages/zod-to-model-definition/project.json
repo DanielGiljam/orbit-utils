@@ -1,7 +1,7 @@
 {
-  "name": "zod-to-model-definitions",
+  "name": "zod-to-model-definition",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/zod-to-model-definitions/src",
+  "sourceRoot": "packages/zod-to-model-definition/src",
   "projectType": "library",
   "targets": {
     "publish": {
@@ -10,17 +10,17 @@
     },
     "test": {
       "executor": "@nx/vite:test",
-      "outputs": ["coverage/packages/zod-to-model-definitions"],
+      "outputs": ["coverage/packages/zod-to-model-definition"],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "../../coverage/packages/zod-to-model-definitions"
+        "reportsDirectory": "../../coverage/packages/zod-to-model-definition"
       }
     },
     "lint": {
       "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/zod-to-model-definitions/**/*.ts"]
+        "lintFilePatterns": ["packages/zod-to-model-definition/**/*.ts"]
       }
     }
   },

@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@orbit-utils/zod-to-model-definitions": [
-        "packages/zod-to-model-definitions/src/index.ts"
+      "@orbit-utils/zod-to-model-definition": [
+        "packages/zod-to-model-definition/src/index.ts"
       ]
     }
   },
