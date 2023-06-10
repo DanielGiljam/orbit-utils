@@ -1,28 +1,28 @@
 {
-  "name": "zod-to-model-definition",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/zod-to-model-definition/src",
-  "projectType": "library",
-  "targets": {
-    "publish": {
-      "command": "node tools/scripts/publish.mjs zod-to-model-definition {args.ver} {args.tag}",
-      "dependsOn": ["build"]
+    "name": "zod-to-model-definition",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/zod-to-model-definition/src",
+    "projectType": "library",
+    "targets": {
+        "publish": {
+            "command": "node tools/scripts/publish.mjs zod-to-model-definition {args.ver} {args.tag}",
+            "dependsOn": ["build"]
+        },
+        "test": {
+            "executor": "@nx/vite:test",
+            "outputs": ["coverage/packages/zod-to-model-definition"],
+            "options": {
+                "passWithNoTests": true,
+                "reportsDirectory": "../../coverage/packages/zod-to-model-definition"
+            }
+        },
+        "lint": {
+            "executor": "@nx/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": ["packages/zod-to-model-definition/**/*.ts"]
+            }
+        }
     },
-    "test": {
-      "executor": "@nx/vite:test",
-      "outputs": ["coverage/packages/zod-to-model-definition"],
-      "options": {
-        "passWithNoTests": true,
-        "reportsDirectory": "../../coverage/packages/zod-to-model-definition"
-      }
-    },
-    "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["packages/zod-to-model-definition/**/*.ts"]
-      }
-    }
-  },
-  "tags": []
+    "tags": []
 }

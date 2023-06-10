@@ -1,1 +1,1 @@
-export * from './lib/ZodToModelDefinition';
+export * from "./lib/ZodToModelDefinition";

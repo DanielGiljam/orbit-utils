@@ -2,28 +2,28 @@
 storage: ../tmp/local-registry/storage
 
 auth:
-  htpasswd:
-    file: ./htpasswd
+    htpasswd:
+        file: ./htpasswd
 
 # a list of other known repositories we can talk to
 uplinks:
-  npmjs:
-    url: https://registry.npmjs.org/
-    maxage: 60m
+    npmjs:
+        url: https://registry.npmjs.org/
+        maxage: 60m
 
 packages:
-  '**':
-    # give all users (including non-authenticated users) full access
-    # because it is a local registry
-    access: $all
-    publish: $all
-    unpublish: $all
+    "**":
+        # give all users (including non-authenticated users) full access
+        # because it is a local registry
+        access: $all
+        publish: $all
+        unpublish: $all
 
-    # if package is not available locally, proxy requests to npm registry
-    proxy: npmjs
+        # if package is not available locally, proxy requests to npm registry
+        proxy: npmjs
 
 # log settings
 logs:
-  type: stdout
-  format: pretty
-  level: http
+    type: stdout
+    format: pretty
+    level: http
