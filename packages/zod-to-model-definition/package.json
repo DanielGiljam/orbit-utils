@@ -3,5 +3,14 @@
     "version": "0.0.1",
     "scripts": {
         "build": "rm -rf ../../dist/packages/zod-to-model-definition && tsup"
+    },
+    "dependencies": {
+        "zod": "^3.21.4"
+    },
+    "devDependencies": {
+        "@orbit/records": "^0.17.0"
+    },
+    "peerDependencies": {
+        "@orbit/records": "^0.17.0"
     }
 }
