@@ -14,7 +14,7 @@ const execAsync = async (command: string): Promise<void> =>
     childProcess.stderr!.pipe(process.stderr);
   });
 
-const outDir = '../../dist/packages/zod-to-model-definitions';
+const outDir = '../../dist/packages/zod-to-model-definition';
 
 export default defineConfig({
   entry: ['src/index.ts'],
