@@ -1,1 +1,2 @@
-export * from "./lib/ZodToModelDefinition";
+export * as m from "./types";
+export * from "./zodToModelDefinition";
