@@ -117,7 +117,7 @@ Can be created by calling `m.key`.
 ```ts
 import type {ZodType} from "zod";
 
-export function key(zodType: ZodType<string>): ZodKey;
+export function key(zodType?: ZodType<string>): ZodKey;
 ```
 
 #### `.meta`
@@ -137,7 +137,7 @@ Can be created by calling `m.attribute`.
 ```ts
 import type {ZodTypeAny} from "zod";
 
-export function attribute(zodType: ZodTypeAny): ZodAttribute;
+export function attribute(zodType?: ZodTypeAny): ZodAttribute;
 ```
 
 #### `.meta`
@@ -169,7 +169,10 @@ Can be created by calling `m.relationship`.
 ```ts
 import type {ZodTypeAny} from "zod";
 
-export function relationship(kind: "hasOne" | "hasMany", type: string): ZodRelationship;
+export function relationship(
+    kind: "hasOne" | "hasMany",
+    type?: string | string[],
+): ZodRelationship;
 ```
 
 #### `.meta`
