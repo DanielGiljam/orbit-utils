@@ -15,11 +15,10 @@ export const zodToRelationshipDefinition = (
     if (zodSchema instanceof ZodObject) {
         const data = zodSchema.shape.data as ZodTypeAny | undefined;
         if (data != null) {
-            return {
-                kind: getRelationshipKind(data),
-                type: getRelationshipType(data),
-                validation: getValidationOptions(data),
-            };
+            const kind = getRelationshipKind(data);
+            const type = getRelationshipType(data);
+            const validation = getValidationOptions(data, kind === "hasMany");
+            return {kind, type, validation};
         } else {
             throw new TypeError(
                 `Expected relationship data type to be defined.`,

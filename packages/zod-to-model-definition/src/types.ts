@@ -284,7 +284,10 @@ export class ZodRelationship<
             type: this._def.type,
             inverse: this._def.inverse,
             dependent: this._def.dependent,
-            validation: getValidationOptions(this._def.innerType.shape.data),
+            validation: getValidationOptions(
+                this._def.innerType.shape.data,
+                this._def.kind === "hasMany",
+            ),
             meta: this._def.meta,
         };
     }
