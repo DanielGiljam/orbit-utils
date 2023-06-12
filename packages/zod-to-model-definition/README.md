@@ -192,3 +192,24 @@ ZodRelationship.inverse: (relationshipName: string) => ZodRelationship
 ```ts
 ZodRelationship.dependentRemove: () => ZodRelationship
 ```
+
+#### `.links`
+
+Schema for the `links` object that can appear on your record. (See [`RecordRelationship`](https://orbitjs.com/docs/api/records/modules#recordrelationship).)
+
+```ts
+import type {Link} from "@orbit/records";
+import type {ZodType} from "zod";
+
+ZodRelationship.links: (schema: ZodType<{[key: string]: Link} | undefined>) => ZodRelationship
+```
+
+#### `.meta`
+
+Schema for the `meta` object that can appear on your record. (See [`RecordRelationship`](https://orbitjs.com/docs/api/records/modules#recordrelationship).)
+
+```ts
+import type {ZodType} from "zod";
+
+ZodRelationship.meta: (schema: ZodType<{[key: string]: unknown} | undefined>) => ZodRelationship
+```

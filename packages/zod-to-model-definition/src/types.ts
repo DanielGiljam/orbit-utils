@@ -1,6 +1,7 @@
 import type {
     AttributeDefinition,
     KeyDefinition,
+    Link,
     RelationshipDefinition,
 } from "@orbit/records";
 import {
@@ -246,6 +247,30 @@ export class ZodRelationship<
         return new ZodRelationship({
             ...this._def,
             dependent: "remove",
+        });
+    }
+
+    links<TLinks extends ZodType<{[key: string]: Link} | undefined>>(
+        schema: TLinks,
+    ) {
+        const newInnerType = this._def.innerType.extend({
+            links: schema,
+        });
+        return new ZodRelationship<typeof newInnerType>({
+            ...this._def,
+            innerType: newInnerType,
+        });
+    }
+
+    meta<TMeta extends ZodType<{[key: string]: unknown} | undefined>>(
+        schema: TMeta,
+    ) {
+        const newInnerType = this._def.innerType.extend({
+            meta: schema,
+        });
+        return new ZodRelationship<typeof newInnerType>({
+            ...this._def,
+            innerType: newInnerType,
         });
     }
 
