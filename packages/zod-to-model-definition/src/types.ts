@@ -43,10 +43,10 @@ export class ZodKey<
         return this._def.innerType._parse(input);
     }
 
-    meta(meta: {[key: string]: unknown}) {
+    definitionMeta(definitionMeta: {[key: string]: unknown}) {
         return new ZodKey({
             ...this._def,
-            meta,
+            meta: definitionMeta,
         });
     }
 
@@ -95,10 +95,10 @@ export class ZodAttribute<T extends ZodTypeAny> extends ZodType<
         return this._def.innerType._parse(input);
     }
 
-    meta(meta: {[key: string]: unknown}) {
+    definitionMeta(definitionMeta: {[key: string]: unknown}) {
         return new ZodAttribute({
             ...this._def,
-            meta,
+            meta: definitionMeta,
         });
     }
 
@@ -228,10 +228,10 @@ export class ZodRelationship<
         return this._def.innerType._parse(input);
     }
 
-    meta(meta: {[key: string]: unknown}) {
+    definitionMeta(definitionMeta: {[key: string]: unknown}) {
         return new ZodRelationship({
             ...this._def,
-            meta,
+            meta: definitionMeta,
         });
     }
 

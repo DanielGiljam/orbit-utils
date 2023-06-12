@@ -63,7 +63,7 @@ import {m} from "@orbit-utils/zod-to-model-definition";
 
 m.relationship("hasOne", "solarSystem").inverse("planets");
 m.relationship("hasMany", "moon").inverse("planet");
-m.attribute(z.number().positive().finite()).meta({unit: "kg"});
+m.attribute(z.number().positive().finite()).definitionMeta({unit: "kg"});
 ```
 
 ## Advantages of using Zod to define your `RecordSchema`
@@ -120,10 +120,10 @@ import type {ZodType} from "zod";
 export function key(zodType?: ZodType<string>): ZodKey;
 ```
 
-#### `.meta`
+#### `.definitionMeta`
 
 ```ts
-ZodKey.meta: (meta: {[key: string]: unknown}) => ZodKey
+ZodKey.definitionMeta: (definitionMeta: {[key: string]: unknown}) => ZodKey
 ```
 
 ### `ZodAttribute`
@@ -140,10 +140,10 @@ import type {ZodTypeAny} from "zod";
 export function attribute(zodType?: ZodTypeAny): ZodAttribute;
 ```
 
-#### `.meta`
+#### `.definitionMeta`
 
 ```ts
-ZodAttribute.meta: (meta: {[key: string]: unknown}) => ZodAttribute
+ZodAttribute.definitionMeta: (definitionMeta: {[key: string]: unknown}) => ZodAttribute
 ```
 
 #### `.serialization`
@@ -175,10 +175,10 @@ export function relationship(
 ): ZodRelationship;
 ```
 
-#### `.meta`
+#### `.definitionMeta`
 
 ```ts
-ZodRelationship.meta: (meta: {[key: string]: unknown}) => ZodRelationship
+ZodRelationship.definitionMeta: (definitionMeta: {[key: string]: unknown}) => ZodRelationship
 ```
 
 #### `.inverse`
