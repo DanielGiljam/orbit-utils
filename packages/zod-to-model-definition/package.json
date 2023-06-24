@@ -15,7 +15,7 @@
         "inference"
     ],
     "scripts": {
-        "build": "rm -rf ../../dist/packages/zod-to-model-definition && tsup"
+        "build": "tsup"
     },
     "dependencies": {
         "zod": "^3.21.4"

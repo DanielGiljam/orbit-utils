@@ -23,17 +23,12 @@ const projectName = "zod-to-model-definition";
 const outDir = `../../dist/packages/${projectName}`;
 
 export default defineConfig({
+    clean: true,
+    dts: true,
     entry: ["src/index.ts"],
     format: "esm",
-    keepNames: false,
-    skipNodeModulesBundle: true,
-    outExtension: () => ({js: ".js"}),
     onSuccess: async () => {
         console.log("onSuccess:");
-        await execAsync(
-            `pnpm tsc --declaration --emitDeclarationOnly --project tsconfig.lib.json --outFile ${outDir}/index.d.ts`,
-        );
-        console.log("  - Emitted TypeScript declaration files.");
         await execAsync(`cp README.md ../../LICENSE ${outDir}`);
         console.log("  - Copied README.md and ../../LICENSE to out directory.");
         const pkg = await readJsonFile("package.json");
@@ -54,4 +49,6 @@ export default defineConfig({
         console.log("  - Done.");
     },
     outDir,
+    outExtension: () => ({js: ".js"}),
+    skipNodeModulesBundle: true,
 });
