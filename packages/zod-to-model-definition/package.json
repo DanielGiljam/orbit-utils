@@ -15,7 +15,8 @@
         "inference"
     ],
     "scripts": {
-        "build": "tsup"
+        "build": "tsup",
+        "prepack": "pnpm build"
     },
     "dependencies": {
         "zod": "^3.21.4"
