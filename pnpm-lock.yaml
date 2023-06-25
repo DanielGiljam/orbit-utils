@@ -99,6 +99,7 @@ importers:
       '@orbit/records':
         specifier: ^0.17.0
         version: 0.17.0
+    publishDirectory: ../../dist/packages/zod-to-model-definition
 
 packages:
 

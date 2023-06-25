@@ -25,5 +25,9 @@
     },
     "peerDependencies": {
         "@orbit/records": "^0.17.0"
+    },
+    "publishConfig": {
+        "access": "public",
+        "directory": "../../dist/packages/zod-to-model-definition"
     }
 }
