@@ -1,6 +1,6 @@
 {
     "name": "@orbit-utils/zod-to-model-definition",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "Define your RecordSchema using Zod.",
     "keywords": [
         "orbit",
