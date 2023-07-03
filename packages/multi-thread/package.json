@@ -1,0 +1,22 @@
+{
+    "name": "@orbit-utils/multi-thread",
+    "version": "0.1.0",
+    "description": "Orchestrate access, transformation, and synchronization between data sources across multiple threads.",
+    "keywords": [
+        "orbit",
+        "orbit.js",
+        "data",
+        "synchronization",
+        "multi-thread",
+        "workers",
+        "browser-tab-sync"
+    ],
+    "scripts": {
+        "build": "tsup",
+        "prepack": "pnpm build"
+    },
+    "publishConfig": {
+        "access": "public",
+        "directory": "../../dist/packages/multi-thread"
+    }
+}

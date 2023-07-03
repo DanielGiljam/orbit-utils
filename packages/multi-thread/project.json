@@ -1,0 +1,28 @@
+{
+    "name": "multi-thread",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "packages/multi-thread/src",
+    "projectType": "library",
+    "targets": {
+        "publish": {
+            "command": "node tools/scripts/publish.mjs multi-thread {args.ver} {args.tag}",
+            "dependsOn": ["build"]
+        },
+        "test": {
+            "executor": "@nx/vite:test",
+            "outputs": ["coverage/packages/multi-thread"],
+            "options": {
+                "passWithNoTests": true,
+                "reportsDirectory": "../../coverage/packages/multi-thread"
+            }
+        },
+        "lint": {
+            "executor": "@nx/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": ["packages/multi-thread/**/*.ts"]
+            }
+        }
+    },
+    "tags": []
+}

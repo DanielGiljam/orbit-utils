@@ -87,6 +87,9 @@ importers:
         specifier: ^0.31.0
         version: 0.31.0(@vitest/ui@0.31.0)(jsdom@20.0.3)
 
+  packages/multi-thread:
+    publishDirectory: ../../dist/packages/multi-thread
+
   packages/zod-to-model-definition:
     dependencies:
       zod:

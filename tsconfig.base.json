@@ -15,6 +15,7 @@
         "skipDefaultLibCheck": true,
         "baseUrl": ".",
         "paths": {
+            "@orbit-utils/multi-thread": ["packages/multi-thread/src/index.ts"],
             "@orbit-utils/zod-to-model-definition": [
                 "packages/zod-to-model-definition/src/index.ts"
             ]
