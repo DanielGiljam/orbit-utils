@@ -22,10 +22,10 @@
         "zod": "^3.21.4"
     },
     "devDependencies": {
-        "@orbit/records": "^0.17.0"
+        "@orbit/records": "*"
     },
     "peerDependencies": {
-        "@orbit/records": "^0.17.0"
+        "@orbit/records": "*"
     },
     "publishConfig": {
         "access": "public",
