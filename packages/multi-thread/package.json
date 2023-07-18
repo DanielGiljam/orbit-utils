@@ -15,6 +15,12 @@
         "build": "tsup",
         "prepack": "pnpm build"
     },
+    "dependencies": {
+        "@orbit/coordinator": "*",
+        "@orbit/core": "*",
+        "@orbit/data": "*",
+        "@orbit/records": "*"
+    },
     "publishConfig": {
         "access": "public",
         "directory": "../../dist/packages/multi-thread"
