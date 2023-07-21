@@ -17,7 +17,7 @@ import type {
 } from "@orbit/records";
 
 import {serviceWorkerClientSyncBroadcastChannelName} from "./constants";
-import {getServiceWorker} from "./service-worker";
+import {getServiceWorker} from "./get-service-worker";
 import {requestWithPostMessage} from "./request-with-post-message";
 
 const {assert, globals} = Orbit;
